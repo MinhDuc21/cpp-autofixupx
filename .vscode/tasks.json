@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "Build (Debug)",
+      "command": "C:/msys64/mingw64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-std=c++23",
+        "-g",
+        "-O0",
+        "-DDEBUG",
+        "${fileDirname}\\*.h",
+        "${fileDirname}\\*.cpp",
+        "-o",
+        "${fileDirname}\\bin\\Debug\\${fileBasenameNoExtension}.exe",
+        "-ld3d9",
+        "-ldwmapi",
+        "-lgdi32"
+      ],
+      "options": {
+        "cwd": "C:/msys64/mingw64/bin"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Compile with debug symbols and no optimization"
+    },
+    {
+      "type": "cppbuild",
+      "label": "Build (Release)",
+      "command": "C:/msys64/mingw64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-std=c++23",
+        "-O3",
+        "-DNDEBUG",
+        "${fileDirname}\\*.h",
+        "${fileDirname}\\*.cpp",
+        "-o",
+        "${fileDirname}\\bin\\Release\\${fileBasenameNoExtension}.exe",
+        "-ld3d9",
+        "-ldwmapi",
+        "-lgdi32",
+        "-static",
+        "-static-libgcc",
+        "-static-libstdc++",
+        "-lpthread",
+        "-mwindows"
+      ],
+      "options": {
+        "cwd": "C:/msys64/mingw64/bin"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Optimized release build without debug symbols"
+    }
+  ]
+}
