@@ -148,7 +148,7 @@ int main(int, char**)
     // Create application window
     WNDCLASSEXW wc = { sizeof(wc), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(nullptr), nullptr, nullptr, nullptr, nullptr, L"ImGui Example", nullptr };
     ::RegisterClassExW(&wc);
-    HWND hwnd = ::CreateWindowW(wc.lpszClassName, L"FxTwitter Link Converter", WS_OVERLAPPEDWINDOW, 100, 100, (int)(650 * main_scale), (int)(350 * main_scale), nullptr, nullptr, wc.hInstance, nullptr);
+    HWND hwnd = ::CreateWindowW(wc.lpszClassName, L"FixupX Link Converter", WS_OVERLAPPEDWINDOW, 100, 100, (int)(650 * main_scale), (int)(350 * main_scale), nullptr, nullptr, wc.hInstance, nullptr);
     AddClipboardFormatListener(hwnd);
 
     // Initialize Direct3D
